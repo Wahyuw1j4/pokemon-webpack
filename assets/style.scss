@@ -6,7 +6,7 @@ $gray: rgb(242, 242, 242);
 // @import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;500;700&display=swap');
 @import url(//db.onlinewebfonts.com/c/073a3b73a63a87e100f6bb8f003fc0d3?family=Flexo+Light);
 
-h1,h2,h3,h4,h5{
+h1,h2,h3,h4,h5,p{
     margin: 0;
     padding: 0;
 }
@@ -80,16 +80,34 @@ body{
                 }
             }
         }
+        .filter{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            .filter-list{
+                display: grid;
+                grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
+                text-align: left;
+            }
+        }
     }
     .pokedex{
         max-width: 80vmax;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         margin: 0 auto;
         background-color: #fff;
         padding: 1rem;
+        
         .row{
             display: grid;
             grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+            place-items: center;
             gap: 1rem;
             width: 100%;
             height: 100%;
@@ -99,15 +117,103 @@ body{
                 flex-direction: column;
       
                 .pokemon-img{
-                    width: 100%;
+                    width: 150px;
                     background-color: $gray;
                     border-radius: 5px;
+                    padding: 0.5rem;
                     img{
                         display: block;
                         margin: 0 auto;
                     }
                 }
             }
+            .pill{
+                text-align: center;
+                font-size: 11px;
+                padding: 2px 5px;
+                border-radius: 3px;
+                &.water{
+                    background-color: #6890F0;
+                    color: #fff;
+                }
+                &.fire{
+                    background-color: #F08030;
+                    color: #fff;
+                }
+                &.grass{
+                    background-color: #78C850;
+                    color: #fff;
+                }
+                &.electric{
+                    background-color: #F8D030;
+                    color: #fff;
+                }
+                &.ice{
+                    background-color: #98D8D8;
+                    color: #fff;
+                }
+                &.fighting{
+                    background-color: #C03028;
+                    color: #fff;
+                }
+                &.poison{
+                    background-color: #A040A0;
+                    color: #fff;
+                }
+                &.ground{
+                    background-color: #E0C068;
+                    color: #fff;
+                }
+                &.flying{
+                    background-color: #A890F0;
+                    color: #fff;
+                }
+                &.psychic{
+                    background-color: #F85888;
+                    color: #fff;
+                }
+                &.bug{
+                    background-color: #A8B820;
+                    color: #fff;
+                }
+                &.rock{
+                    background-color: #B8A038;
+                    color: #fff;
+                }
+                &.ghost{
+                    background-color: #705898;
+                    color: #fff;
+                }
+                &.dragon{
+                    background-color: #7038F8;
+                    color: #fff;
+                }
+                &.dark{
+                    background-color: #705848;
+                    color: #fff;
+                }
+                &.steel{
+                    background-color: #B8B8D0;
+                    color: #fff;
+                }
+                &.fairy{
+                    background-color: #EE99AC;
+                    color: #fff;
+                }
+                &.normal{
+                    background-color: #A8A878;
+                    color: #fff;
+                }
+                &.unknown{
+                    background-color: #68A090;
+                    color: #fff;
+                }
+            }
+        }
+        .pokeloading{
+            margin: 1rem;
+            display: flex;
+            justify-content: center;
         }
     }
 }
