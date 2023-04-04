@@ -4,49 +4,87 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <title>Pokemon</title>
   </head>
   <body>
     <div class="header"></div>
     <div class="main">
-      <!-- <div class="title">
-            <h3>Search Pokemon</h3>
-        </div> -->
-      <div class="search">
-        <input type="text" placeholder="Search Pokemon" id="search" />
-      </div>
       <div class="filter">
-        <div class="filter-item">
-            <input type="checkbox" id="all" checked/>
-            <label for="all">Show all</label>
-          </div>
-        <!-- <div class="filter-title">
-          <h3>Filter Pokemon</h3>
-        </div> -->
-        
-        <div class="filter-list"></div>
+        <select-poke id="select-poke"></select-poke>
       </div>
     </div>
     <div class="pokedex">
-      <div class="row" id="pokelist">
-        <!-- <div class="pokemon">
-                <div class="pokemon-img">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="">
-                </div>
-                <div class="pokemon-name">
-                    <h3>Bulbasaur</h3>
-                </div>
-                <div class="pills">
-                    <span class="pill water">water</span>
-                    <span class="pill bug">water</span>
-                    <span class="pill fighting">water</span>
-                </div>
-            </div> -->
+      <div class="my-row" id="pokelist">
+
       </div>
       <div class="pokeloading">LOADING...</div>
+      <!-- modal -->
+      <div
+        class="modal fade"
+        id="pokeModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="pokeModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="pokeModalLabel">Modal title</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="" class="w-100"
+                    ">
+                  </div>
+                  <div class="col-md-6 p-3">
+                    <div class="stats p-3">
+                        <strong>STATISTIC</strong>
+                        <div class="label d-flex justify-content-between">
+                          <p>HP</p>
+                          <p>50%</p>
+                        </div>
+                        <span style="width: 50%; border: 2px solid white"></span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- <poke-search></poke-search> -->
 
     <script src="../dist/main.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
